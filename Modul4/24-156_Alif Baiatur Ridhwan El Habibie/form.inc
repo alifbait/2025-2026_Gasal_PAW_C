@@ -1,0 +1,48 @@
+ <form name="myForm" action="processData_form.php" method="POST">
+        <div class="field">
+            <label for="surname">Surname</label><br>
+            <input type="text" name="surname" size="31"/><br><br>
+        </div>
+        <div class="field">
+            <label for="email">Email address</label><br>
+            <input type="text" name="email" size="31"/><br><br>
+        </div>
+        <div class="field">
+            <label for="passwd">Password</label><br>
+            <input type="password" name="passwd" size="31"/><br><br>
+        </div>
+        <div class="field">
+            <label for="address">Street Address</label><br>
+            <textarea name="address" rows="3" cols="22"></textarea>
+        </div><br>
+        <div class="field">
+            <label for="state">State</label><br>
+            <select name="state">
+                <option value="-1" selected>[choose your state]</option>
+                <option value="1">Australian Capital Territory</option>
+                <option value="2">Queensland</option>
+                <option value="3">Victoria</option>
+                <option value="4">New South Wales</option>
+                <option value="5">Tasmania</option>
+                <option value="6">South Australia</option>
+                <option value="7">Western Australia</option>
+                <option value="8">Northern Territory</option>
+            </select><br><br>
+        </div>
+        <div class="field">
+            <input type="hidden" name="country" value="Australia">
+        </div>
+        <div class="field">
+            <label for="sex">Gender</label><br>
+            <input type="radio" name="sex" value="male"/>Male
+            <input type="radio" name="sex" value="female"/>Female
+        </div><br>
+        <div class="field">
+            <label for="vegetarian">Vegetarian</label>
+            <input type="checkbox" name="vegetarian" />
+        </div><br>
+        <div class="field">
+            <label>&nbsp;</label>
+            <input type="submit" value="Submit" name="submit" /><input type="reset" value="Reset" name="reset" />
+        </div>
+    </form>
