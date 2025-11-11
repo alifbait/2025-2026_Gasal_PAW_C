@@ -1,0 +1,82 @@
+-- Active: 1729731626569@@127.0.0.1@3306@penjualan
+INSERT INTO supplier (nama, telp, alamat) VALUES
+('PT Sinar Kencana', '02199887766', 'Jl. Industri No. 10'),
+('CV Berkah Abadi', '02188776655', 'Jl. Perdagangan No. 20'),
+('PT Cahaya Baru', '02177665544', 'Jl. Pabrik No. 30'),
+('UD Sejahtera Jaya', '02166554433', 'Jl. Grosir No. 40'),
+('PT Karya Makmur', '02155443322', 'Jl. Distribusi No. 50'),
+('CV Tani Jaya', '02144332211', 'Jl. Pertanian No. 60'),
+('UD Sumber Lestari', '02133221100', 'Jl. Sawah No. 70'),
+('PT Mitra Usaha', '02122110099', 'Jl. Produksi No. 80'),
+('CV Cahaya Sentosa', '02111009988', 'Jl. Niaga No. 90'),
+('UD Sukses Abadi', '02100998877', 'Jl. Perkebunan No. 100');
+INSERT INTO pelanggan (id, nama, jenis_kelamin, telp, alamat) VALUES
+(1, 'Irfan Maulana', 'L', '081223344556', 'Jl. Teratai No. 11'),
+(2, 'Siti Marwah', 'P', '082112233445', 'Jl. Cendrawasih No. 22'),
+(3, 'Adi Susanto', 'L', '081334455667', 'Jl. Angsana No. 33'),
+(4, 'Ratna Ayu', 'P', '082223344556', 'Jl. Kenari No. 44'),
+(5, 'Hendra Kusuma', 'L', '081445566778', 'Jl. Cemara No. 55'),
+(6, 'Lina Purnama', 'P', '082334455667', 'Jl. Kamboja No. 66'),
+(7, 'Agus Prasetyo', 'L', '081556677889', 'Jl. Flamboyan No. 77'),
+(8, 'Nurhayati Zain', 'P', '082445566778', 'Jl. Dahlia No. 88'),
+(9, 'Ridwan Ahmad', 'L', '081667788990', 'Jl. Mawar No. 99'),
+(10, 'Tina Lestari', 'P', '082556677889', 'Jl. Jambu No. 100');
+INSERT INTO user (username, password, nama, alamat, hp, level) VALUES
+('admin100', 'adminpass1', 'Admin Pertama', 'Jl. Admin No. 1', '081223344556', 1),
+('admin101', 'adminpass2', 'Admin Kedua', 'Jl. Admin No. 2', '081334455667', 1),
+('staff100', 'staffpass1', 'Staff Satu', 'Jl. Staff No. 3', '081445566778', 2),
+('staff101', 'staffpass2', 'Staff Dua', 'Jl. Staff No. 4', '081556677889', 2),
+('user100', 'userpass1', 'Pengguna Satu', 'Jl. User No. 5', '081667788990', 3),
+('user101', 'userpass2', 'Pengguna Dua', 'Jl. User No. 6', '081778899001', 3),
+('user102', 'userpass3', 'Pengguna Tiga', 'Jl. User No. 7', '081889900112', 3),
+('user103', 'userpass4', 'Pengguna Empat', 'Jl. User No. 8', '081990011223', 3),
+('user104', 'userpass5', 'Pengguna Lima', 'Jl. User No. 9', '081101122334', 3),
+('user105', 'userpass6', 'Pengguna Enam', 'Jl. User No. 10', '081212233445', 3);
+INSERT INTO barang (kode_barang, nama_barang, harga, stok, supplier_id) VALUES
+('BRG101', 'Kopi Robusta Premium', 60000, 50, 1),
+('BRG102', 'Teh Oolong', 30000, 120, 2),
+('BRG103', 'Gula Merah', 18000, 80, 3),
+('BRG104', 'Minyak Kelapa', 25000, 70, 4),
+('BRG105', 'Beras Organik', 16000, 150, 5),
+('BRG106', 'Susu Kedelai', 40000, 100, 6),
+('BRG107', 'Mie Instan Rasa Ayam', 3500, 600, 7),
+('BRG108', 'Minyak Goreng Sawit', 15000, 200, 8),
+('BRG109', 'Beras Pandan Wangi', 14000, 100, 9),
+('BRG110', 'Garam Himalaya', 2200, 500, 10);
+INSERT INTO transaksi (waktu_transaksi, keterangan, total, pelanggan_id) VALUES
+('2024-10-11', 'Pembelian kopi robusta premium dan teh oolong', 90000, 1),
+('2024-10-12', 'Pembelian minyak goreng sawit dan gula merah', 33000, 2),
+('2024-10-13', 'Pembelian beras pandan wangi dan garam himalaya', 16200, 3),
+('2024-10-14', 'Pembelian susu kedelai dan mie instan rasa ayam', 43500, 4),
+('2024-10-15', 'Pembelian kopi robusta premium', 60000, 5),
+('2024-10-16', 'Pembelian minyak kelapa', 25000, 6),
+('2024-10-17', 'Pembelian beras pandan wangi', 14000, 7),
+('2024-10-18', 'Pembelian teh oolong', 30000, 8),
+('2024-10-19', 'Pembelian gula merah', 18000, 9),
+('2024-10-20', 'Pembelian garam himalaya', 2200, 10);
+INSERT INTO pembayaran (waktu_bayar, total, metode, transaksi_id) VALUES
+('2024-10-11 10:00:00', 90000, 'TUNAI', 1),
+('2024-10-12 11:30:00', 33000, 'TRANSFER', 2),
+('2024-10-13 12:45:00', 16200, 'TUNAI', 3),
+('2024-10-14 14:15:00', 43500, 'EDC', 4),
+('2024-10-15 16:00:00', 60000, 'TUNAI', 5),
+('2024-10-16 17:00:00', 25000, 'TRANSFER', 6),
+('2024-10-17 18:00:00', 14000, 'EDC', 7),
+('2024-10-18 19:00:00', 30000, 'TUNAI', 8),
+('2024-10-19 20:00:00', 18000, 'TRANSFER', 9),
+('2024-10-20 21:00:00', 2200, 'EDC', 10);
+INSERT INTO transaksi_detail (transaksi_id, barang_id, harga, qty) VALUES
+(1, 1, 60000, 1),
+(1, 1, 30000, 1),
+(2, 8, 15000, 1),
+(2, 3, 18000, 1),
+(3, 9, 14000, 1),
+(3, 10, 2200, 1),
+(4, 6, 40000, 1),
+(4, 7, 3500, 1),
+(5, 1, 60000, 1),
+(6, 4, 25000, 1),
+(7, 9, 14000, 1),
+(8, 2, 30000, 1),
+(9, 3, 18000, 1),
+(10, 10, 2200, 1);
