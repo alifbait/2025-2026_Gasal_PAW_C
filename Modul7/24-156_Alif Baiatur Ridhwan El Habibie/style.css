@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 1200px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header-title {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.25rem;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+}
+
+.btn-back, .btn-show, .btn-excel {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-back {
+    background-color: #007bff;
+    margin-bottom: 10px;
+}
+
+.btn-excel {
+    background-color: #ffb300;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
+
+.btn-show {
+    background-color: #28a745;
+}
+
+.btn-show:hover {
+    background-color: #218838;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.summary-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.summary-table th, .summary-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.summary-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.summary-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.report-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.report-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#mychart {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.date-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.date-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.date-form button {
+    padding: 8px 15px;
+    font-size: 1rem;
+}
+
+@media print {
+    .noprint {
+        display: none;
+    }
+    #judul {
+        background-color: #0d6efd;
+        color: white;
+    }
+}
+
+.top-navigation {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.table-wrapper {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper h2 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.primary { background-color: #007bff; }
+.success { background-color: #28a745; }
+.info { background-color: #17a2b8; }
+.danger { background-color: #dc3545; }
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.main-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.main-table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    background-color: #6db4ff;
+    color: #333;
+}
+
+.main-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.main-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-btns {
+    display: flex;
+    gap: 5px;
+}
+
+.report-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
